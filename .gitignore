@@ -1,0 +1,66 @@
+# LaTeX temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.fmt
+*.gaux
+*.glog
+*.glsdefs
+*.glg
+*.gls
+*.glsdefs
+*.glstex
+*.glo
+*.gxg
+*.gxs
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.pdf
+*.run.xml
+*.synctex
+*.synctex.gz
+*.toc
+*.xdv
+
+# BibTeX
+*.bib.bak
+
+# Makeindex
+*.mst
+
+# Latexmk
+.latexmkrc
+
+# LuaTeX
+*.luatex
+*.lua
+
+# XeTeX
+*.xetex
+
+# Texpad
+.texpadtmp
+
+# build artifacts
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
