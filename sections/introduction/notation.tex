@@ -1,0 +1,39 @@
+\subsection{Basic results and notation} 
+
+In this section, we mention some basic results and concepts used in this paper and fix some basic notation as well.
+
+$\Lim$ denotes the set of limit ordinals in $\mathfrak c$, the cardinality of the continuum.
+
+$\mathbb N$ denotes the subset of non-positive integers and $\omega$ is the first limit ordinal. These objects can, of course, be identified, but we reserve the symbol $\mathbb N$ for this specific use for clarity. We consider that $0\in \mathbb N\subseteq \mathbb Z\subseteq \mathbb Q$.
+
+For any object $a$, $\vec {a}$ denotes the unique sequence of constant value $a$. 
+
+Let $X$ be a non-empty set and $G$ be an Abelian group with unitary element $0$. Given a function $f : X \to G$, the support of $f$ is $\supp{f} = \lbrace x \in G : f(x) \neq 0 \rbrace$. The Abelian group $\lbrace f \in G^X : \vert \supp{f} \vert < \omega \rbrace$ will be denoted by  $G^{(X)}$. When $X$ is clear from the context, for any subset $Y \subset X$, $R^{(Y)}$ denotes the subgroup $\lbrace f \in G^{(X)} \mid \supp{f} \subset Y \rbrace$. If $\bar f$ is a sequence in $G^X$, $\supp \bar f=\bigcup_{i \in \omega} \supp f(i)$.
+
+Let $p$ be an ultrafilter. $\Ult_p(G)$ is the quotient $G^\omega/\simeq_p$, where $\simeq_p$ is the equivalence relation on $X^\omega$ defined by $f\simeq_p g$ if and only if $\{n \in \omega \mid f(n)=g(n)\} \in p$. $\Ult_p(G)$  is easily seen to have a natural Abelian group structure. Moreover, if $G$ is, in fact, a $R$-module for some commutative ring with unit $R$, then $\Ult_p(G)$ has a natural $R$-module structure.
+
+Given $f \in X^{\omega}$, $[f]_p$ is the equivalence class determined by $\simeq_p$. The mapping that associated $g \in G$ to $[\vec g]_p\in \Ult_p(G)$ is easily seen to be a group monomorphism. We say that an element of $\Ult_P(G)$ is constant if it is in the range of this monomorphism, that is, if it is of the form $[\vec g]_p$, with $g \in G$. The set of all constants of $\Ult_p(G)$ is denoted by $\underline{G}$. Notice that in the case that $G$ is also a $R$-module, the preceding mapping is in fact an $R$-module monomorphism.
+
+The following shorthand will come in handy:
+
+    \begin{defin}
+    Let $G$ be an Abelian group, $p$ be an ultrafilter, and $(f_i: i \in I)$ be a family of members of $G^\omega$.  We say that $(f_i: i \in I)$ is $p$-independent mod constants if:
+    \begin{enumerate}
+        \item the mapping $i\rightarrow [f_i]_p+\underline G\in \Ult_p(G)/\underline G$ is injective, and
+        \item $\{[f_i]_p+\underline G: i \in I\}\subseteq \Ult_p(G)/\underline G$ is $\mathbb Z$-linearly independent.
+    \end{enumerate}
+\end{defin} 
+
+We will be working with subspaces of the vector space $\mathbb Q^{(\mathfrak c)}$. In this context, for every $\alpha \in \mathfrak c$, $\chi_\alpha\in N^{(\mathfrak c)}$ denotes the characteristic function of $\{\alpha\}$, so $\chi_\alpha(\alpha)=1$ and $\chi_\alpha(\beta)=0$ for all $\beta\in \mathfrak c\setminus \{\alpha\}$.
+
+Given a topological space $X$, a sequence $f:\omega\rightarrow X$ and a free ultrafilter $p$, we say a point $x \in X$ is a $p$-limit of $f$ if for every neighborhood $U$ of $x$, $\{n \in \omega: f(n)\in U\}\in p$. If $X$ is Hausdorff, every sequence has at most one $p$-limit, and, when it exists, we denote it by $p$-$\lim$ $f$.  We say that a topological space is $p$-compact if every sequence has a $p$-limit.
+
+
+A countably compact space is a topological space such that every countable open cover has a finite subcover - or, equivalently, if every sequence in the space has an accumulation point. It is well known that every accumulation point of a sequence is also a $p$-limit of such sequence, for some ultrafilter $p$.
+
+
+As already mentioned, a Wallace semigroup is a two-sided cancellative countably compact topological semigroup which is not a topological group.
+
+A free ultrafilter $p$ is said to be selective (or Ramsey) if for every $f:[\omega]^2\rightarrow 2$ there exists $A \in p$ such that $f|_{[A]^2}$ is constant. It is well known that selective ultrafilters are exactly the minimal ultrafilter in the Rudin-Keisler order, which is the pre-order defined in the collection of all free ultrafilters defined by  $p \leq_{\RK} q$ if there exists a function $f : \omega \to \omega$ such that $p=\{f^{-1}[A]:A\in q\}$. Two selective ultrafilters are said to be incomparable if they are incomparable with respect to $\leq_{\RK}$. The existence of selective ultrafilters is known to be independent from ZFC. 
+
+The group $\mathbb T$ is the unit circle, which can be defined as the quotient $\mathbb R/\mathbb Z$.
