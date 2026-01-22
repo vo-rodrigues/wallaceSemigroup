@@ -1,0 +1,97 @@
+
+\section{A briefing on stacks}
+
+    In \cite{Tomita15}, a structure called \textit{stack} has been defined. In this section, we quickly review the main results regarding this structure. This section is not intended to be a reference on stacks - we only mention what is strictly necessary to make this paper self-contained. 
+    
+    Roughly speaking, a stack is a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, along with an infinite set of indexes $A\subseteq \mathbb N$ and an integer $N$ (along with some other auxiliary objects) satisfying certain properties that helps to generate homomorphisms with accumulation and convergence properties of interest. In \cite{Tomita15}, Tomita proved that every collection of sequences in $\mathbb Z^{(\mathfrak c)}$ can be associated to an stack so that if $A$ is in some free ultrafilter $p$ and the sequences in this stack have $p$-limits in a group topology, so does the original collection. 
+    
+        Below we give the complete definition of an integer stack. We will not discuss all the details of the definition. The reader interested in why each of the bullet points is needed may refer to \cite{Tomita15}. We do not recommend trying to figure out the importance of each bullet point solely after reading the definition, and understanding that is not important for understanding the proofs in this paper.
+       
+    \begin{defin} 
+    Let $A$ be an infinite subset of $\omega$. An integer stack $\mathcal S$ on $A$ is composed by
+		\begin{itemize}
+			\item natural numbers $s,t,M$, positive integers $r_i$ for each $0 \leq i < s$, and positive integers $r_{i,j}$ for each $0 \leq i < s$ and $0 \leq j < r_i$,
+			\item functions $f_{i,j,k} \in ( \mathbb Z^{(\mathfrak c)})^{A}$ for each $0 \leq i < s$, $0 \leq j < r_i$, $0 \leq k < r_{i,j}$ and $g_l \in ( \mathbb Z^{(\mathfrak c)})^{A}$ for each $0 \leq l < t$, 
+			\item sequences $\xi_i \in \mathfrak c^{A}$ for each $0 \leq i < s$ and $\mu_l \in \mathfrak c^{A}$ for $0 \leq l < t$, 
+			\item real numbers $\theta_{i,j,k}$ for each $0 \leq i < s$, $0 \leq j < r_i$, $0 \leq k < r_{i,j}$,
+		\end{itemize}
+	satisfying the following
+		\begin{enumerate}[label=\roman*)]
+			\item $\mu_l(n) \in \supp g_l(n)$ for every $n \in A$,
+            \item $\mu_{l^*}(n) \notin \supp g_l(n)$ for each $n \in A$ and $0 \leq l^* < l < t$,
+			\item  the elements of $\lbrace \mu_l(n) \mid 0 \leq l < t, n \in A \rbrace$ are pairwise distinct,
+			\item $\vert g_l(n) \vert \leq M$ for each $n \in A$ and $0 \leq l < t$,
+			\item $(\theta_{i,j,k} \mid 0 \leq k < r_{i,j} )$ is injective and linearly independent (as a $\mathbb Q$-vector space) for each $0 \leq i < s$ and $0 \leq j < r_i$,
+            \item $\left( \frac{f_{i,j,k}(n)(\xi_i(n))}{f_{i,j,0}(n)(\xi_i(n))} \right)_{n \in A} \to \theta_{i,j,k}$ for each $0 \leq i < s$, $0 \leq j < r_i$ and $0 \leq k < r_{i,j}$,
+			\item $\left( \vert f_{i,j,k}(n)(\xi_i(n)) \vert \right)_{n \in A}$ converges monotonically to $+\infty$ for each $0 \leq i < s$, $0 \leq j < r_i$ and $0 \leq k < r_{i,j}$,
+			\item $\vert f_{i,j,k}(n)(\xi_i(n)) \vert > \vert f_{i,j,k^*}(n)(\xi_i(n)) \vert$ for each $n \in A$, $i < s$, $j < r_i$ and $0 \leq k < k^* < r_{i,j}$,
+			\item $\left( \frac{f_{i,j,k}(n)(\xi_i(n))}{f_{i,j^*,k^*}(n)(\xi_i(n))} \right)_{n \in A}$  converges monotonically to $0$ for each $0 \leq i < s$, $0 \leq j^* < j < r_i$, $0 \leq k < r_{i,j}$ and $0 \leq k^* < r_{i,j^*}$,
+			\item $\lbrace f_{i,j,k}(n)(\xi_{i^*}(n)) \mid n \in A \rbrace \subset [-M, M]$ for each $0 \leq i^* < i < s$, $0 \leq j < r_i$ and $0 \leq k < r_{i,j}$.
+		\end{enumerate}
+    The support of an integer stack $\mathcal S$ on $A$ is defined by the union of the support of each $f_{i,j,k}(n)$ and $g_l(n)$ (for $n \in A$). 
+	\end{defin}
+     
+    \begin{defin}
+    Let $\mathcal S$ be an integer stack on $A$ and $N$ be a positive integer. The $N$th root of $\mathcal S$, denoted by $\frac{1}{N}. \mathcal S$, is obtained by replacing $f_{i,j,k}$ by $\frac{1}{N}. f_{i,j,k}$ for each $i < s$, $j < r_i$ and $k < r_{i,j}$, replacing $g_l$ by $\frac{1}{N}. g_{l}$ for each $l < t$, and keeping the rest of the structure of $\mathcal{S}$. 
+
+    A \textit{stack} is a structure of the form $\frac1N \mathcal S$, where $\mathcal S$ is an integer stack and $N$ is a positive integer.
+    \end{defin}
+
+   
+    The following proposition, originally from \cite[{Lemma 7.1.}]{Tomita15}. It has been restated in \cite{kp} with more specific statements. The latter version, in the notation of the current paper, reads as follows:
+
+    \begin{lem}[Lemma 5.4., \cite{kp}]\label{stack}\label{Tomita15lemma7.1}
+	Let $p$ be a selective ultrafilter, $m \in \omega$ and $(h_i: i <m)$ be sequences in $\mathbb Z^{(\mathfrak c)}$ which are $p$-independent mod constants (with respect to $G=\mathbb Z^{(\mathfrak c)}$).
+ 
+ Then there exists $A\in p$, a positive integer $N$ and a integer stack $\calS$ on~$A$ 
+	such that, for each $i<m$, $h_i|_A$  is an 
+		integer combination of the elements of the sequences of the stack $\frac{1}{N} \calS$ restricted to $A$. 
+		On the other hand, each sequence of the integer stack~$\calS$ is 
+		an integer combination of $(h_i|A)_{i<m}$
+
+	
+	We will say in this case that the finite sequence 
+	$( h_0, \ldots , h_{m-1})$ is $p$-associated to $(\calS, N, A)$.
+	
+\end{lem}
+
+	It is worth mentioning that the hypothesis ``$(h_i: i<m)$ are sequences in $\mathbb Z^{(\mathfrak c)}$ which are $p$-independent mod constants'', in \ref{Tomita15lemma7.1}, reads as ``$(h_i:i<m)$  are sequences in $\mathbb Z^{(\mathfrak c)}$ such that the family $([h_i]_p:i<m)$ united with $([\vec \chi_{\alpha}]_p: \alpha<\mathfrak c)$ is linearly independent over $\mathbb Q$''. However, both these hypothesis are easily seen to be equivalent.
+
+    We have the following:
+
+    \begin{remark}\label{suptRemark}
+        In the notation of Lemma \ref{Tomita15lemma7.1}, if $(h_i)_{i<m}$ is $p$-associated to $(\mathcal S, N, A)$, then  $\bigcup_{n \in A, i<m}\supp h_i(n)$ is the union of the supports of the elements of the integer stack $\mathcal S$. Also, if $M|N$, $(\mathcal S, M, A)$ is also associated to $(h_i)_{i<m}$.
+    \end{remark}
+
+    The importance of stacks with respect to countably compactness comes from the following result:
+
+    
+
+    \begin{lem}[Lemma 8.4, \cite{Tomita15}] \label{Tomita15lema8.4}
+    Let  $(p_m : m \in \omega)$ be a family of incomparable selective ultrafilters and $( N_m : m \in \omega)$ be an enumeration of the positive integers such that each such integer is appears infinitely often.
+    
+    Let $\mathcal S_m$ be an integer stack on $A_m$ with $A_m \in p_m$ for each $m \in \omega$. In addition, consider $s^m$, $t^m$, $r^m_i$, $r^m_{i,j}$, $M^m$, $r^m$, $L^m$, $f^m_{i,j,k}$ and $g^m_l$ as part of the structure of $\mathcal S_m$.
+
+    For any family $( c)^\frown(c^m_{i,j,k} : m < \omega, i < s^m, j < r^m_i, k < r^m_{i,j})^\frown (d^m_l \mid m < \omega, l < t^m)$ of $\mathbb Z^{(\mathfrak c)}$ with $c \neq 0$,  there exists a homomorphism $\phi : \mathbb{Q}^{(\mathfrak c)} \rightarrow \mathbb{\mathbb T}$ such that
+        \begin{enumerate}
+            \item[a)] $\phi(c) \neq 0$,
+            \item[b)] $p_{m}$-$ \lim\limits_{n \to \infty} \phi \left( \frac{1}{N_m} f^m_{i,j,k}(n) \right) = \phi \left(  c^m_{i,j,k} \right)$ for any $i < s^m$, $j < r^m_i$, $k < r^m_{i,j}$ and $m \in \omega$,
+            \item[c)] $p_{m}$-$ \lim\limits_{n \to \infty} \phi \left( \frac{1}{N_m} g^m_{l}(n) \right) = \phi ( d^m_{l} )$ for any $l < t^m$ and $m \in \omega$.
+        \end{enumerate}
+    \end{lem}
+
+    
+   We will need the following definition related to stacks:
+
+
+    \begin{defin} 
+    For $\gamma=0, 1$, let $\mathcal S_\gamma$, be the stacks defined by $s^\gamma$, $t^\gamma$, $M^\gamma$, $(r_i^\gamma: i<s^\gamma)$, $(r_{i, j}^\gamma: 0\leq i<s^\gamma, 0\leq j<r_i^\gamma)$, $(f_{i, j, k}^{\gamma}: i<s^\gamma, j<r_i^\gamma, k<r_{i, j}^\gamma)$, $(\xi_i^\gamma: i<s^\gamma$, $(\mu_l^\gamma: l<t^\gamma)$ and $(\theta_{i, j, k}^\gamma: i<s^\gamma, j<r_i^\gamma, k<r_{i, j}^\gamma)$.
+    
+    Assume $\mathcal S_0$ and $\mathcal S_1$ have disjoint supports. The union of $\mathcal S_0$, $\mathcal S_1$ is the stack $\mathcal S_0\sqcup \mathcal S_1$ defined as follows:
+
+    Let $t=t^0+t^1$, $s=s^0+s^1$ and $M=M^0+M^1$. Let $g_l=g^0_l$ for $l<t_o$ and $g_l=g^1_{l-t_0}$ if $t^0\leq l <t^0+t^1$. If $i<s^0$ define $r_i=r^0_i$, $r_{i,j}=r^0_{i,j}$ for $j<r_i$ and $f_{i,j,k}=f^0_{i,j,k}$.
+
+    If $s^0\leq i< s^0+s^1$ define $r_i=r^1_{i-s^0}$, $r_{i,j}=r^1_{i-s^0,j}$ for $j<r_i$ and $r_{i,j}=r^1_{i-s^0,j}$ for $j< r_{i}=r^1_{i-s^0}$ and $f_{i,j,k}=f^1_{i-s^0,j,k}$ for $j<r_i$ and $k<r_{i,j}$. Define $\xi_l$'s and $\theta_{i,j,k}$ simillarly.
+    \end{defin}
+
+    It is straightforward to verify that $\mathcal S_0\sqcup \mathcal S_1$ is an integer stack. We note that this easy verification is the only verification in this paper for which looking at bullet points i)-x) is needed, and we leave the proof as an easy exercise. Observe, however, that the hypothesis of disjoint supports is relevant. 

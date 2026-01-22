@@ -1,0 +1,45 @@
+
+
+\section{$\mathbb H$ has no semigroup topology which makes its $\omega$-th power countably compact}
+
+In this section, we prove (in ZFC) that $\mathbb N\oplus \mathbb Z^{(\mathfrak c)}$ does not admit a Hausdorff group topology which makes its $\omega$-th power countably compact, concluding the proof of the consistency of the existence of a Wallace group whose $\omega$-th power is its first power that is not countably compact. 
+
+We prove something more general. For that purpose, we say that an Archimedian semigroup with identity is a $4$-uple $(T, +, 0, \leq )$ such that $(T, +, 0)$ is an Abelian semigroup with identity $0$, $\leq $ is a total order such that for all $a, b, c, d \in A$, if $a\leq b$ and $c\leq  d$, then $a+c\leq b+d$, and for all $a>0$ and $b\in T$, there exists $n \in \mathbb N$ such that $na>b$. An element $a \in T$ is said to be non-negative if $a\geq 0$. \\
+
+
+
+In what follows, $G$ needs not to be Abelian. Recall that if $X$ is a topological space such that $X^\omega$ is countably compact, then given $\mathcal F$ a countable collection of sequences in $X$ there exists a (common) free ultrafilter  $p$ suchh that for every $f \in \mathcal F$, there exists $p$-$\lim f$.
+\begin{prop}\label{restrictionZ}
+    Let $G$ be a semigroup with identity and $T$ be an Archimedian semigroup with identity whose all elements are non-negative. If $T\neq \{0\}$, then there is no Hausdorff semigroup topology in $T\times G$ which makes its $\omega$-th power countably compact.
+\end{prop}
+
+\begin{proof} Assume by contradiction that $H=T\times G$ admits such a topology.
+
+    Fix any $z \in H$ and $\bar c\in T\setminus \{0\}$. Write $c=(\bar c, e_G)$, and for every $n\in \omega$, let $nc=(n\bar c, e_G)$.
+
+
+    For each $k \in \omega$, let $x_k=(z)_{i<k}\,^\frown(nc)_{n \in \omega}$.
+
+
+    \begin{table}[H]
+    \begin{tabular}{llllllll}
+    $x_0$:& $0c$&  $1c$&  $2c$&  $3c$ & $4c$ & $5c$ & $\cdots$ \\
+    $x_1$:& $z$    &  $0c$&  $1c$&  $2c$ & $3c$ &$4c$ & $\cdots$\\
+    $x_2$:& $z$    & $z$ & $0c$&  $1c$& $2c$ &$3c$ & $\cdots$\\
+    $x_3$:& $z$    & $z$ & $z$ &$0c$&  $1c$ &$2c$ & $\cdots$\\
+    \end{tabular}
+    \caption*{Table: Illustration of the sequence of sequences $(x_k)_{k \in \omega}$.}
+    \end{table}
+    As $H^\omega$ is countably compact, there exists a free ultrafilter $p$ such that for every $k\in \omega$, there exists $a_k=p$-$\lim x_k$. As a clarification, notice that these $p$-limits are being taken in $H$ as $x_k:\omega\rightarrow H$.
+    
+    By continuity, for every $k \in \omega$, $a_{k}+kc=a_0$.
+
+    There exists $r \in T$ and $g \in G$ such that $a_0=(r, g)$. Let $k\in \omega$ be such that $k\bar c> r$. Write $a_k=(r', g')$. Then $(r, g)=a_0=a_{k}+kc= (r'+k\bar c, g')$. 
+
+    Thus, $r'+k\bar c=r$. As $r'\geq 0$, we have that $r=r'+k\bar c\geq k\bar c+0=k\bar c>r$, a contradiction.
+\end{proof}
+
+Notice that all subsemigroups of $\mathbb R$ of non-negative elements (in particular, $\mathbb N$) satisfy what is required by $T$. Thus, combining the preceding result with Example \ref{maintresult} we get:
+\begin{cor}\label{mainexample}
+    Assuming the existence of $\mathfrak c$ pairwise incomparable selective ultrafilters, there exists a topology in $\mathbb N\oplus \mathbb Z^{(\mathfrak c)}$ which makes it a Wallace semigroup whose first power that fails to be countably compact is $\omega$.
+\end{cor}

@@ -1,0 +1,132 @@
+\section{Main result}
+
+
+   In this section, we will show that $\mathbb N\oplus \mathbb Z^{(\mathfrak c)}$ can be endowed with a countably compact Hausdorff topology. Notationally, it will be easier to work with the isomorphic semigroup $\mathbb H=\{x \in \mathbb Z^{(\mathfrak c)}: x(0)\geq 0\}$.
+
+   We will rely on the following easy lemma.
+
+   \begin{lem}\label{freeSubgroup}
+       Let $G$ be a torsion-free Abelian group. Then:       
+       \begin{enumerate}
+           \item $\Ult_p(G)/\underline G$ is torsion-free.
+           \item For every finite subset $B$ of $\Ult_p(G)$, $(\langle B\rangle \oplus \underline G)/\underline G$ is free and finitely-generated
+       \end{enumerate}
+   \end{lem}
+   \begin{proof}
+
+   $\Ult_p(G)/\underline G$ is torsion-free: if $a\in \Ult_p(G)$ and $n$ is a positive integer such that $n(a+\underline G)=0$, then $na \in \underline G$. Thus, there exists $g \in G$ such that $na=n[\vec g]_p=[\vec{ng}]_p$. Write $a=[f]_p$. Thus, $\{i \in \omega: n(f(i)-g)=0\}\in p$, so $\{i \in \omega: f(i)-g=0\}\in p$, entailing $a=[f]_p=[\vec g]_p\in \mathbb G$.
+   
+    For the second item, $(\langle B\rangle \oplus \underline G)/\underline G$ is torsion-free by item (1). As it is also finitely generated, it follows that it is free.
+   \end{proof}
+
+
+ 
+    For the next proof, recall that a finitely generated torsion-free Abelian group is free. 
+    \begin{prop} \label{PropWw}
+    Let $( r_i \mid i < m)$ be a finite family in $\mathbb N^\omega$ and $p$ be an ultrafilter. There exist a family $(h_i: i<k)$ in $\mathbb Z^{\omega}$, a family $(b_i: i<k) \in \mathbb N^k$ and a family $(a_{i, j}: i<m, j<k)$ of integers such that:
+    
+    \begin{enumerate}
+        \item $[r_i]_p = [\vec b_i + \displaystyle\sum_{j < k} a_{i,j}.h_j]_p$ for every $i<k$, and
+        \item $([h_j]_p: j<k)$ is $p$-independent mod constants (with $G=\mathbb Z$).
+    \end{enumerate}
+    \end{prop}
+
+    \begin{proof}   
+    Let $B=\{[r_i]_p: i<m\}$. By Lemma \ref{freeSubgroup}, $H=(\langle B\rangle\oplus \underline {\mathbb Z})/\underline {\mathbb Z}$ is finitely-generated and free. Let $( g_j : j < k)$ be a family of members of $\mathbb{Z}^{\omega}$ such that $( [g_j]_p +\underline{\mathbb Z} : j < k )$ is a basis of  $H$. Thereby, $([g_j]_p: j < k )^\frown ([\vec 1]_p)$ is a basis of $\langle B\rangle\oplus \underline{\mathbb Z}$.
+    
+    So, for every $i < m$, there are $z_i \in \mathbb Z$ and $(a_{i,j}: j < k ) \in  \mathbb{Z} ^{k}$ such that $[r_i] = \left[\vec z_i+\sum_{j < k} a_{i,j}.g_j \right]_p$. We have that $A=\bigcap_{j<k}\{n \in \omega:  r_i(n)=z_i+\sum_{j<k}a_{i, j}g_j(n)\}\in p$. Let $n_0\in A$ and, for each $i<m$, let  $b_i=r_i(n_0)\in \mathbb N$ and $h_j=g_j-\vec{g_j(n_0)}$.
+    
+    It follows that for every $n \in A$ and $i<n$:
+
+    $$b_i+\sum_{j<k}a_{i, j}h_j(n)=z_i+\sum_{j<k}a_{i, j}g_j(n_0)+\sum_{j<k}a_{i, j}[g_j(n)-g_j(n_0)]=z_i+\sum_{j<k}a_{i, j}g_j(n)=h_i(n).$$
+    \end{proof}
+
+    For the remaining of this paper, we will assume the existence of $\mathfrak c$ incomparable selective ultrafilters. First, we enumerate all finite subsets of sequences in $\mathbb H$ and then enumerate all the associated stacks that will be necessary by using the following notation:
+    
+    \begin{notation} \label{wstack} We fix the following:
+    \begin{itemize}
+    \item $( p_{\alpha} : \alpha \in \Lim )$ a family of pairwise incomparable selective ultrafilters.
+        \item $\mathbb H=\{x \in \mathbb Z^{(\mathfrak c)}: x(0)\geq 0\}=\mathbb N. \chi_0 \oplus \mathbb{Z}^{(\mathfrak{c} \setminus \lbrace 0 \rbrace)}$.
+        \item $\mathbb H_0=\{x \in \mathbb H: \supp x\subseteq \{0\}\}\approx \mathbb N$ and $\mathbb H_1=\{x \in \mathbb H: 0 \notin \supp x\}\approx \mathbb Z^{(\mathfrak c)}$.
+
+        \item $( (h^{\alpha}_{0}, ..., h^{\alpha}_{m_{\alpha}-1}) : \alpha \in \Lim  )$ a surjective enumeration of all nonempty finite families of sequences in $\mathbb H$ such that $\displaystyle\bigcup_{i < m_{\alpha}} \supp h^{\alpha}_{i} \subset \alpha$ for every $\alpha \in \Lim$.
+                \end{itemize}
+        For each $\alpha \in \Lim$, we define:
+        \begin{itemize}
+        \item $( u^{\alpha}_i : i < m_{\alpha}) $ and $( v^{\alpha}_i : i < m_{\alpha})$ families of sequences in  $\mathbb{H}_1$ and $\mathbb N$ (respectively) such that $h^{\alpha}_i = v^{\alpha}_i. \vec\chi_{ {0}} + u^{\alpha}_i$ for each $i < m_{\alpha}$.
+        \item $( w^{\alpha}_j : j < k_{\alpha})$ a family of sequences in $\mathbb Z^{\omega}$, $(b_i^\alpha: i<m_{\alpha})\in \mathbb N^{m_\alpha}$ $(a_{i, j}^\alpha: i<m_\alpha, j<k_\alpha)$ is a family of integers such that \begin{enumerate}
+            \item $\forall i<m_\alpha\, [v_i^\alpha]_{p_\alpha}=[\vec b_i^\alpha+\sum_{j<k_\alpha} a_{i, j}^\alpha w_j^\alpha]_{p_\alpha}.$
+            \item  $([h_i]_{p_\alpha}: i<m_\alpha)$ is $p_\alpha$-independent mod constants (with respect to $\mathbb Z$).
+
+        \end{enumerate}
+
+        This exists by Proposition \ref{PropWw}. Notice that the second item implies that          $([h_i\chi_0]_{p_\alpha}: i<m_\alpha)$ is $p_\alpha$-independent mod constants with respect to $\mathbb Z^{(\mathfrak c)}$.
+        \item $(\mathcal S^0_{\alpha}, N^0_{\alpha}, C^0_\alpha)$  a stack $p_\alpha$-associated to $(w_j^\alpha \chi_0: j<k_\alpha)$. This exists by Proposition \ref{Tomita15lemma7.1}. Notice that the supports of the sequences in $\mathcal S_\alpha^0$ are contained in $\{0\}$.
+        \item  $(z^{\alpha}_i : i<o_\alpha)$ a finite family of sequences in $\mathbb Z^{(\mathfrak c)}$ such that 
+        $([z^\alpha_i]_{p_\alpha}+ \underline{\mathbb Z^{(\mathfrak c)}}: i<o_\alpha)$ 
+        is a basis of $(\langle [u_i^\alpha]_{p_\alpha}: i<m_\alpha\rangle \oplus \underline{\mathbb Z^{(\mathfrak c)}})/\underline{\mathbb Z^{(\mathfrak c)}}$.
+
+        This exists by Proposition \ref{freeSubgroup}. Notice that $(z^{\alpha}_i : i<o_\alpha)$ is a $p_\alpha$-independent mod constants family. We may choose the $z_i^\alpha$'s so that $0 \notin \supp z^i_\alpha$.
+
+                \item $(\mathcal S^1_{\alpha}, N^1_{\alpha}, C^1_\alpha)$ a stack $p_\alpha$-associated to $(z_i^\alpha: i<o_\alpha)$.
+                
+                This exists by Proposition \ref{Tomita15lemma7.1}. By Remark \ref{suptRemark}, $0$ is not in the supports of the elements of $\mathcal S^1_\alpha$.
+                \item $A_{\alpha} = \bigcap_{i<m_\alpha}\{n \in C^0_{\alpha}  \cap C^1_{\alpha}: v_i^{\alpha} b_i^\alpha+\sum_{j<k_{\alpha}}a_{i, j}^\alpha w_j^\alpha(n)\}\in p_{\alpha}$.
+                \item $N_\alpha=N_\alpha^1.N_\alpha^2$, $\mathcal S_\alpha=\mathcal S_\alpha^0\sqcup \mathcal S_\alpha^1$.
+                \item An injective, finite enumeration of the sequences of $\mathcal S_\alpha$, $(y^\alpha_j: j<q_\alpha)$.
+    \end{itemize}
+    
+    
+    Notice that  $( w^{\alpha}_j \chi_0:j<k_\alpha)^\frown ( z^{\alpha}_i \mid i < o_{\alpha} )$ is $p_\alpha$-associated to $(\mathcal S_{\alpha}, N_{\alpha}, A_{\alpha})$.
+
+    Furthermore, the supports of the elements of $\mathcal S^\alpha$ are contained in $\bigcup_{i < m_{\alpha}} \supp h^{\alpha}_{i} \subset \alpha$ for every $\alpha \in \Lim$.         
+    \end{notation}
+
+
+
+
+
+    Finally, we give a positive answer to Question 9.4 of \cite{Tomita15}.
+    
+    \begin{exam}\label{maintresult}
+   Assuming the existence of $\mathfrak c$ pairwise incomparable selective ultrafilters. There exists a group topology on $\mathbb Z^{(\mathfrak c)}$ for which all the finite powers of the subsemigroups $\mathbb H$ and $\mathbb H_1$ are countably compact.
+    \end{exam}
+
+    \begin{proof}
+    Fix $c \in \mathbb Z^{(\mathfrak c)}\setminus \{0\}$. There exists a countable set $T_c \subset \mathfrak c$  such that
+        \begin{itemize}
+            \item $\supp c \subset T_{c}$, 
+            \item if $\alpha \in T_{c}$ and $\beta \leq \alpha < \beta + \omega$ then $[\beta, \beta + \omega) \subset T_{c}$,
+            \item if $\alpha \in T_{c}$ is a limit ordinal then $\bigcup_{j<q_\alpha} \supp y^\alpha_j \subset T_{c}$,
+            \item for each positive integer $N$, there exists infinitely many $\alpha \in T_{c}$ such that $N_{\alpha} = N$.       
+        \end{itemize}
+        
+   
+
+    Let $( \alpha_m \mid m \in \omega )$ be an enumeration of all limit ordinals in $T_c$. In virtue of Lemma \ref{Tomita15lema8.4}, there exists a homomorphism $\phi_c : \mathbb{Q}^{(T_c)} \rightarrow \mathbb{T}$ such that    
+        \begin{enumerate}
+            \item[a)] $\phi_c(c) \neq 0$,
+            \item[b)] $p_{\alpha_m}- \lim\limits_{n \to \infty} \phi_c \left( \frac{1}{N_{\alpha_m}} y^{\alpha_m}_{j}(n) \right) = \phi_c \left( \chi_{\alpha_m + j} \right)$ for all $m \in \omega$, $j< q_{\alpha_m}$.
+        
+        \end{enumerate}
+
+    By the divisibility of $\mathbb T$ and compactness, we can recursively extend $\phi_c$ to $\mathbb Q^{(\mathfrak c)}$ so that:
+        \begin{enumerate}
+            \item[a')] $\phi_c(c) \neq 0$,
+            \item[b')] $p_{\alpha}- \lim\limits_{n \to \infty} \phi_c \left( \frac{1}{N_{\alpha}} y^{\alpha}_{j}(n) \right) = \phi_c \left( \chi_{\alpha + j} \right)$ for all $m \in \omega$, $j< q_\alpha$.
+        
+        \end{enumerate}
+
+
+    Thus, the weak topology on $\mathbb Q^{(\mathfrak c)}$ generated by the family of homomorphisms $(\phi_c : c \in \mathbb Z^{(\mathfrak c)} \setminus \lbrace 0 \rbrace )$, which is a Hausdorff group topology, satisfies:
+            \begin{enumerate}
+            \item[a'')] $\phi_c(c) \neq 0$,
+            \item[b'')] $p_{\alpha}- \lim\limits_{n \to \infty} \frac{1}{N_{\alpha}} y^{\alpha}_{j}(n)= \ \chi_{\alpha + j} $ for all $m \in \omega$, $j< q_\alpha$.
+        
+        \end{enumerate}
+    
+    Therefore, for each $\alpha \in \Lim$, the sequences in the stack $ \frac{1}{N_\alpha}\mathcal S_\alpha$ have $p_\alpha$-limits  in $\{\chi_{\alpha+j}: j<q_\alpha\}$. Thus the sequences in $( w^{\alpha}_j \chi_0:j<k_\alpha)$ and $( z^{\alpha}_i : i < o_{\alpha} )$  have a $p_\alpha$-limits in $\langle \chi_{\alpha+j}:j<q_\alpha \rangle \subseteq 
+    \mathbb H_1$. By the definition of the $z^\alpha_i$'s, it follows that each $u^\alpha_i$'s has a $p_\alpha$-limit in $\mathbb H_1$ as well. This proves that all powers of $\mathbb H_1^m$ are countably compact.
+    
+    By the definition of the $w^\alpha_j$´s and $b^\alpha_i$'s it then follows that the $p_\alpha$-limit of each $v_\alpha^i\chi_0$ is in $\mathbb H$, thus, the $p_\alpha$-limit of each $u_i^\alpha$ is in $\mathbb H$ as well. This proves that all powers of $\mathbb H^m$ are countably compact.
+      \end{proof}
