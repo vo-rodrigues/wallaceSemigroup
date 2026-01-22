@@ -17,15 +17,19 @@ If $\bar f$ is a sequence into $G^X$, we define $\supp \bar f=\bigcup_{i \in \om
 
 Let $p$ be an ultrafilter.
 $\Ult_p(G)$ is the ultrapower of $G$ by $p$, that is, the quotient $G^\omega/\simeq_p$, where $\simeq_p$ is the equivalence relation on $X^\omega$ defined by $f\simeq_p g$ if and only if $\{n \in \omega \mid f(n)=g(n)\} \in p$.
+Given $f \in X^{\omega}$, $[f]_p$ is the equivalence class determined by $\simeq_p$.
 $\Ult_p(G)$ is easily seen to have a natural Abelian group structure defined by $[f]_p+[g]_p=[f+g]_p$, where $f+g$ is defined pointwise.
-Moreover, if $G$ is, in fact, an $R$-module for some commutative ring with unit $R$, then $\Ult_p(G)$ has a natural $R$-module structure defined by $r.[f]_p=[r.f]_p$, where $r.f$ is defined pointwise.
 
-Given $f \in X^{\omega}$, $[f]_p$ is the equivalence class determined by $\simeq_p$. The mapping that associated $g \in G$ to $[\vec g]_p\in \Ult_p(G)$ is easily seen to be a group monomorphism. We say that an element of $\Ult_P(G)$ is constant if it is in the range of this monomorphism, that is, if it is of the form $[\vec g]_p$, with $g \in G$. The set of all constants of $\Ult_p(G)$ is denoted by $\underline{G}$. Notice that in the case that $G$ is also a $R$-module, the preceding mapping is in fact an $R$-module monomorphism.
+The mapping that associates $g \in G$ to $[\vec g]_p\in \Ult_p(G)$ is also easily verified to be a group monomorphism. 
+We say that an element of $\Ult_P(G)$ is constant if it is in the range of this monomorphism, that is, if it is of the form $[\vec g]_p$, with $g \in G$. The set of all constants of $\Ult_p(G)$ is denoted by $\underline{G}$. Such set is a subgroup of $\Ult_p(G)$.
+Moreover, if $G$ is, in fact, an $R$-module for some commutative ring with unit $R$, then $\Ult_p(G)$ has a natural $R$-module structure defined by $r.[f]_p=[r.f]_p$, where $r.f$ is defined pointwise.
+Notice that in the case that $G$ is also a $R$-module, the preceding mapping is in fact an $R$-module monomorphism and $\underline{G}$ is a submodule of $\Ult_p(G)$.
 
 The following shorthand will come in handy:
 
     \begin{defin}
-    Let $G$ be an Abelian group, $p$ be an ultrafilter, and $(f_i: i \in I)$ be a family of members of $G^\omega$.  We say that $(f_i: i \in I)$ is $p$-independent mod constants if:
+    Let $G$ be an Abelian group, $p$ be an ultrafilter, and $(f_i: i \in I)$ be a family of members of $G^\omega$.
+    We say that $(f_i: i \in I)$ is $p$-independent mod constants if:
     \begin{enumerate}
         \item the mapping $i\rightarrow [f_i]_p+\underline G\in \Ult_p(G)/\underline G$ is injective, and
         \item $\{[f_i]_p+\underline G: i \in I\}\subseteq \Ult_p(G)/\underline G$ is $\mathbb Z$-linearly independent.
