@@ -9,9 +9,16 @@ We consider that $0\in \mathbb N\subseteq \mathbb Z\subseteq \mathbb Q$.
 
 For any object $a$, $\vec {a}$ denotes the unique sequence of constant value $a$, that is, the unique function $f$ whose domain is $\mathbb N$ and such that $f(n)=a$ for every $n\in \mathbb N$.
 
-Let $X$ be a non-empty set and $G$ be an Abelian group with unitary element $0$. Given a function $f : X \to G$, the support of $f$ is $\supp{f} = \lbrace x \in G : f(x) \neq 0 \rbrace$. The Abelian group $\lbrace f \in G^X : \vert \supp{f} \vert < \omega \rbrace$ will be denoted by  $G^{(X)}$. When $X$ is clear from the context, for any subset $Y \subset X$, $R^{(Y)}$ denotes the subgroup $\lbrace f \in G^{(X)} \mid \supp{f} \subset Y \rbrace$. If $\bar f$ is a sequence in $G^X$, $\supp \bar f=\bigcup_{i \in \omega} \supp f(i)$.
+Let $X$ be a non-empty set and $G$ be an Abelian group with identity $0$.
+Given a function $f : X \to G$, the support of $f$ is defined as $\supp{f} = \lbrace x \in G : f(x) \neq 0 \rbrace$.
+The Abelian group $\lbrace f \in G^X : \vert \supp{f} \vert < \omega \rbrace$ will be denoted by  $G^{(X)}$.
+When $X$ is clear from the context, for any subset $Y \subset X$, $R^{(Y)}$ denotes the subgroup $\lbrace f \in G^{(X)} \mid \supp{f} \subset Y \rbrace$.
+If $\bar f$ is a sequence into $G^X$, we define $\supp \bar f=\bigcup_{i \in \omega} \supp f(i)$.
 
-Let $p$ be an ultrafilter. $\Ult_p(G)$ is the quotient $G^\omega/\simeq_p$, where $\simeq_p$ is the equivalence relation on $X^\omega$ defined by $f\simeq_p g$ if and only if $\{n \in \omega \mid f(n)=g(n)\} \in p$. $\Ult_p(G)$  is easily seen to have a natural Abelian group structure. Moreover, if $G$ is, in fact, a $R$-module for some commutative ring with unit $R$, then $\Ult_p(G)$ has a natural $R$-module structure.
+Let $p$ be an ultrafilter.
+$\Ult_p(G)$ is the ultrapower of $G$ by $p$, that is, the quotient $G^\omega/\simeq_p$, where $\simeq_p$ is the equivalence relation on $X^\omega$ defined by $f\simeq_p g$ if and only if $\{n \in \omega \mid f(n)=g(n)\} \in p$.
+$\Ult_p(G)$ is easily seen to have a natural Abelian group structure defined by $[f]_p+[g]_p=[f+g]_p$, where $f+g$ is defined pointwise.
+Moreover, if $G$ is, in fact, an $R$-module for some commutative ring with unit $R$, then $\Ult_p(G)$ has a natural $R$-module structure defined by $r.[f]_p=[r.f]_p$, where $r.f$ is defined pointwise.
 
 Given $f \in X^{\omega}$, $[f]_p$ is the equivalence class determined by $\simeq_p$. The mapping that associated $g \in G$ to $[\vec g]_p\in \Ult_p(G)$ is easily seen to be a group monomorphism. We say that an element of $\Ult_P(G)$ is constant if it is in the range of this monomorphism, that is, if it is of the form $[\vec g]_p$, with $g \in G$. The set of all constants of $\Ult_p(G)$ is denoted by $\underline{G}$. Notice that in the case that $G$ is also a $R$-module, the preceding mapping is in fact an $R$-module monomorphism.
 
