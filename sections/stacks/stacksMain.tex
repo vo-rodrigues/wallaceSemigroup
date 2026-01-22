@@ -1,11 +1,11 @@
 
 \section{A briefing on stacks}
 
-    In \cite{Tomita15}, a structure called \textit{stack} has been defined. In this section, we quickly review the main results regarding this structure. This section is not intended to be a reference on stacks - we only mention what is strictly necessary to make this paper self-contained. 
+    In \cite{tomita2015group}, a structure called \textit{stack} has been defined. In this section, we quickly review the main results regarding this structure. This section is not intended to be a reference on stacks - we only mention what is strictly necessary to make this paper self-contained. 
     
-    Roughly speaking, a stack is a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, along with an infinite set of indexes $A\subseteq \mathbb N$ and an integer $N$ (along with some other auxiliary objects) satisfying certain properties that helps to generate homomorphisms with accumulation and convergence properties of interest. In \cite{Tomita15}, Tomita proved that every collection of sequences in $\mathbb Z^{(\mathfrak c)}$ can be associated to an stack so that if $A$ is in some free ultrafilter $p$ and the sequences in this stack have $p$-limits in a group topology, so does the original collection. 
+    Roughly speaking, a stack is a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, along with an infinite set of indexes $A\subseteq \mathbb N$ and an integer $N$ (along with some other auxiliary objects) satisfying certain properties that helps to generate homomorphisms with accumulation and convergence properties of interest. In \cite{tomita2015group}, Tomita proved that every collection of sequences in $\mathbb Z^{(\mathfrak c)}$ can be associated to an stack so that if $A$ is in some free ultrafilter $p$ and the sequences in this stack have $p$-limits in a group topology, so does the original collection. 
     
-        Below we give the complete definition of an integer stack. We will not discuss all the details of the definition. The reader interested in why each of the bullet points is needed may refer to \cite{Tomita15}. We do not recommend trying to figure out the importance of each bullet point solely after reading the definition, and understanding that is not important for understanding the proofs in this paper.
+        Below we give the complete definition of an integer stack. We will not discuss all the details of the definition. The reader interested in why each of the bullet points is needed may refer to \cite{tomita2015group}. We do not recommend trying to figure out the importance of each bullet point solely after reading the definition, and understanding that is not important for understanding the proofs in this paper.
        
     \begin{defin} 
     Let $A$ be an infinite subset of $\omega$. An integer stack $\mathcal S$ on $A$ is composed by
@@ -38,9 +38,9 @@
     \end{defin}
 
    
-    The following proposition, originally from \cite[{Lemma 7.1.}]{Tomita15}. It has been restated in \cite{kp} with more specific statements. The latter version, in the notation of the current paper, reads as follows:
+    The following proposition, originally from \cite[{Lemma 7.1.}]{tomita2015group}. It has been restated in \cite{kp} with more specific statements. The latter version, in the notation of the current paper, reads as follows:
 
-    \begin{lem}[Lemma 5.4., \cite{kp}]\label{stack}\label{Tomita15lemma7.1}
+    \begin{lem}[Lemma 5.4., \cite{kp}]\label{stack}\label{tomita2015grouplemma7.1}
 	Let $p$ be a selective ultrafilter, $m \in \omega$ and $(h_i: i <m)$ be sequences in $\mathbb Z^{(\mathfrak c)}$ which are $p$-independent mod constants (with respect to $G=\mathbb Z^{(\mathfrak c)}$).
  
  Then there exists $A\in p$, a positive integer $N$ and a integer stack $\calS$ on~$A$ 
@@ -55,19 +55,19 @@
 	
 \end{lem}
 
-	It is worth mentioning that the hypothesis ``$(h_i: i<m)$ are sequences in $\mathbb Z^{(\mathfrak c)}$ which are $p$-independent mod constants'', in \ref{Tomita15lemma7.1}, reads as ``$(h_i:i<m)$  are sequences in $\mathbb Z^{(\mathfrak c)}$ such that the family $([h_i]_p:i<m)$ united with $([\vec \chi_{\alpha}]_p: \alpha<\mathfrak c)$ is linearly independent over $\mathbb Q$''. However, both these hypothesis are easily seen to be equivalent.
+	It is worth mentioning that the hypothesis ``$(h_i: i<m)$ are sequences in $\mathbb Z^{(\mathfrak c)}$ which are $p$-independent mod constants'', in \ref{tomita2015grouplemma7.1}, reads as ``$(h_i:i<m)$  are sequences in $\mathbb Z^{(\mathfrak c)}$ such that the family $([h_i]_p:i<m)$ united with $([\vec \chi_{\alpha}]_p: \alpha<\mathfrak c)$ is linearly independent over $\mathbb Q$''. However, both these hypothesis are easily seen to be equivalent.
 
     We have the following:
 
     \begin{remark}\label{suptRemark}
-        In the notation of Lemma \ref{Tomita15lemma7.1}, if $(h_i)_{i<m}$ is $p$-associated to $(\mathcal S, N, A)$, then  $\bigcup_{n \in A, i<m}\supp h_i(n)$ is the union of the supports of the elements of the integer stack $\mathcal S$. Also, if $M|N$, $(\mathcal S, M, A)$ is also associated to $(h_i)_{i<m}$.
+        In the notation of Lemma \ref{tomita2015grouplemma7.1}, if $(h_i)_{i<m}$ is $p$-associated to $(\mathcal S, N, A)$, then  $\bigcup_{n \in A, i<m}\supp h_i(n)$ is the union of the supports of the elements of the integer stack $\mathcal S$. Also, if $M|N$, $(\mathcal S, M, A)$ is also associated to $(h_i)_{i<m}$.
     \end{remark}
 
     The importance of stacks with respect to countably compactness comes from the following result:
 
     
 
-    \begin{lem}[Lemma 8.4, \cite{Tomita15}] \label{Tomita15lema8.4}
+    \begin{lem}[Lemma 8.4, \cite{tomita2015group}] \label{tomita2015grouplema8.4}
     Let  $(p_m : m \in \omega)$ be a family of incomparable selective ultrafilters and $( N_m : m \in \omega)$ be an enumeration of the positive integers such that each such integer is appears infinitely often.
     
     Let $\mathcal S_m$ be an integer stack on $A_m$ with $A_m \in p_m$ for each $m \in \omega$. In addition, consider $s^m$, $t^m$, $r^m_i$, $r^m_{i,j}$, $M^m$, $r^m$, $L^m$, $f^m_{i,j,k}$ and $g^m_l$ as part of the structure of $\mathcal S_m$.
