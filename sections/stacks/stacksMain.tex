@@ -1,23 +1,20 @@
 
 \section{A briefing on stacks}
 
-    In \cite{tomita2015group}, a structure called \textit{stack} has been defined to produce a group topology for $\mathbb Z^{(\mathfrak c)}$ without convergent subsequences such that every finite power is countably compact, with the aid of selective ultrafilters.
+In \cite{tomita2015group}, a structure called \textit{stack} has been defined to produce a group topology for $\mathbb Z^{(\mathfrak c)}$ without convergent subsequences such that every finite power is countably compact, with the aid of selective ultrafilters.
 
-    A stack is, as we shall review, a finite collection of sequences of elements of $\mathbb Z^{(\mathfrak c)}$ satisfying certain properties and having some extra structure.
+A stack is, as we shall review, a finite collection of sequences of elements of $\mathbb Z^{(\mathfrak c)}$ satisfying certain properties and having some extra structure.
+
+Roughly speaking, given a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, we \emph{associate} it to a stack in a way so that if the sequences in the stack have $p$-limits in some group topology, so do the original collection.
+Thus, if for every stack, we can guarantee the existence of a free ultrafilter $p$ such that the sequences in the stack have $p$-limits, we guarantee that all the finite powers of $\mathbb Z^{(\mathfrak c)}$ are countably compact.
+In order for that, a family of homomorphisms that separates points (to ensure Hausdorffness) is constructed.
+Particular properties of a fixed family of ultrafilters may be used to construct such homomorphisms, and that is where the assumption of the existence of $\mathfrak c$ incomparable selective ultrafilters comes into play in \cite{tomita2015group}.
+The construction of such homomorphisms is very convoluted, and the interested reader may refer to \cite{tomita2015group} for details.
+Here, we will review the definition of stacks and state all the known results about them that will be used in this paper.
     
-    Roughly speaking, given a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, we \emph{associate} it to a stack in a way so that if the sequences in the stack have $p$-limits in some group topology, so do the original collection.
-    Thus, if for every stack, we can guarantee the existence of a free ultrafilter $p$ such that the sequences in the stack have $p$-limits, we guarantee that all the finite powers of $\mathbb Z^{(\mathfrak c)}$ are countably compact.
-    In order for that, a family of homomorphisms that separates points (to ensure Hausdorffness) is constructed.
-    Particular properties of a fixed family of ultrafilters may be used to construct such homomorphisms, and that is where the assumption of the existence of $\mathfrak c$ incomparable selective ultrafilters comes into play in \cite{tomita2015group}.
-    The construction of such homomorphisms is very convoluted, and the interested reader may refer to \cite{tomita2015group} for details.
-    Here, we will review the definition of stacks and state all the known results about them that will be used in this paper.
-    
-    Roughly speaking, a stack is a finite collection of sequences in $\mathbb Z^{(\mathfrak c)}$, along with an infinite set of indexes $A\subseteq \mathbb N$ and an integer $N$ (along with some other auxiliary objects) satisfying certain properties that helps to generate homomorphisms with accumulation and convergence properties of interest. In \cite{tomita2015group}, Tomita proved that every collection of sequences in $\mathbb Z^{(\mathfrak c)}$ can be associated to an stack so that if $A$ is in some free ultrafilter $p$ and the sequences in this stack have $p$-limits in a group topology, so does the original collection. 
-    
-        Below we give the complete definition of an integer stack. We will not discuss all the details of the definition. The reader interested in why each of the bullet points is needed may refer to \cite{tomita2015group}. We do not recommend trying to figure out the importance of each bullet point solely after reading the definition, and understanding that is not important for understanding the proofs in this paper.
-       
     \begin{defin} 
-    Let $A$ be an infinite subset of $\omega$. An integer stack $\mathcal S$ on $A$ is composed by
+    Let $A$ be an infinite subset of $\omega$.
+    An integer stack $\mathcal S$ on $A$ is composed by
 		\begin{itemize}
 			\item natural numbers $s,t,M$, positive integers $r_i$ for each $0 \leq i < s$, and positive integers $r_{i,j}$ for each $0 \leq i < s$ and $0 \leq j < r_i$,
 			\item functions $f_{i,j,k} \in ( \mathbb Z^{(\mathfrak c)})^{A}$ for each $0 \leq i < s$, $0 \leq j < r_i$, $0 \leq k < r_{i,j}$ and $g_l \in ( \mathbb Z^{(\mathfrak c)})^{A}$ for each $0 \leq l < t$, 
